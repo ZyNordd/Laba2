@@ -16,6 +16,14 @@ public:
     ~Combo();
 
 private:
+    int operation_type = 1;
     Ui::Combo *ui;
+    int64_t factorial(int64_t n);
+
+private slots:
+    void on_pushButton_A_clicked();//1 type
+    void on_pushButton_C_clicked();//2 type
+    void on_pushButton_P_clicked();//3 type
+    void on_pushButton_calculate_clicked();
 };
 #endif // COMBO_H
