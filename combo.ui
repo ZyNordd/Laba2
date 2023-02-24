@@ -19,193 +19,583 @@
    <string>Combo</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label_type">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>130</y>
-      <width>71</width>
-      <height>111</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>60</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>A</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_allCount">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>210</y>
-      <width>61</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>17</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>n</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_electCount">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>150</y>
-      <width>61</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>17</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>k</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_answer">
-    <property name="geometry">
-     <rect>
-      <x>530</x>
-      <y>170</y>
-      <width>211</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>20</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>ANSWER</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_calculate">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>180</y>
-      <width>141</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Расчитать</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_repetition">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>20</y>
-      <width>51</width>
-      <height>131</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>66</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>_</string>
-    </property>
-   </widget>
-   <widget class="QWidget" name="gridLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>370</y>
-      <width>904</width>
-      <height>121</height>
-     </rect>
-    </property>
-    <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="2">
-      <widget class="QPushButton" name="pushButton_P">
-       <property name="font">
-        <font>
-         <pointsize>22</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>P</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QPushButton" name="pushButton_repitition">
-       <property name="font">
-        <font>
-         <pointsize>20</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Повторения вкл/выкл</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="2">
-      <widget class="QPushButton" name="pushButton_multi">
-       <property name="font">
-        <font>
-         <pointsize>17</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Правило умножения</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QPushButton" name="pushButton_sum">
-       <property name="font">
-        <font>
-         <pointsize>18</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Правило сложения</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QPushButton" name="pushButton_C">
-       <property name="font">
-        <font>
-         <pointsize>22</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>C</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0">
-      <widget class="QPushButton" name="pushButton_A">
-       <property name="font">
-        <font>
-         <pointsize>22</pointsize>
-        </font>
-       </property>
-       <property name="text">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="A_noRep">
+       <attribute name="title">
         <string>A</string>
-       </property>
+       </attribute>
+       <widget class="QPushButton" name="pushButton_A_calculate">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>270</y>
+          <width>141</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Расчитать</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_A_k">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>240</y>
+          <width>61</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>17</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>k</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_A_answer">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>260</y>
+          <width>211</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>ANSWER</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_A_n">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>300</y>
+          <width>61</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>17</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>n</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_A">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>220</y>
+          <width>71</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>60</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>A</string>
+        </property>
+       </widget>
       </widget>
-     </item>
-    </layout>
-   </widget>
+      <widget class="QWidget" name="A_Rep">
+       <attribute name="title">
+        <string>A rep</string>
+       </attribute>
+       <widget class="QLineEdit" name="lineEdit_A_k_Rep">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>270</y>
+          <width>61</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>17</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>k</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_A_answer_Rep">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>290</y>
+          <width>211</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>ANSWER</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_A_calculate_Rep">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>300</y>
+          <width>141</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Расчитать</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_A_n_Rep">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>330</y>
+          <width>61</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>17</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>n</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_A_Rep">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>250</y>
+          <width>71</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>60</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>A</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_A_underline">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>140</y>
+          <width>51</width>
+          <height>131</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>66</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>_</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="C_noRep">
+       <attribute name="title">
+        <string>C</string>
+       </attribute>
+       <widget class="QLineEdit" name="lineEdit_C_k">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>310</y>
+          <width>61</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>17</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>k</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_C_answer">
+        <property name="geometry">
+         <rect>
+          <x>590</x>
+          <y>330</y>
+          <width>211</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>ANSWER</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_C_calculate">
+        <property name="geometry">
+         <rect>
+          <x>440</x>
+          <y>340</y>
+          <width>141</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Расчитать</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_C_n">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>370</y>
+          <width>61</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>17</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>n</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_C">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>290</y>
+          <width>71</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>60</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>C</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="C_Rep">
+       <attribute name="title">
+        <string>C rep</string>
+       </attribute>
+       <widget class="QLineEdit" name="lineEdit_C_k_Rep">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>290</y>
+          <width>61</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>17</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>k</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_C_answer_Rep">
+        <property name="geometry">
+         <rect>
+          <x>480</x>
+          <y>310</y>
+          <width>211</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>answer</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_C_calculate_Rep">
+        <property name="geometry">
+         <rect>
+          <x>330</x>
+          <y>320</y>
+          <width>141</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Расчитать</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_C_n_Rep">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>350</y>
+          <width>61</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>17</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>n</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_C_Rep">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>270</y>
+          <width>71</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>60</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>C</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_C_underline">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>160</y>
+          <width>51</width>
+          <height>131</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>66</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>_</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="P_noRep">
+       <attribute name="title">
+        <string>P</string>
+       </attribute>
+       <widget class="QLineEdit" name="lineEdit_P_answer">
+        <property name="geometry">
+         <rect>
+          <x>490</x>
+          <y>280</y>
+          <width>211</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>ANSWER</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_P_calculate">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>290</y>
+          <width>141</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Расчитать</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_P_n">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>320</y>
+          <width>61</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>17</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>n</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_P">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>240</y>
+          <width>71</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>60</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>P</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="P_Rep">
+       <attribute name="title">
+        <string>P rep</string>
+       </attribute>
+       <widget class="QLineEdit" name="lineEdit_P_n_Rep">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>320</y>
+          <width>61</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>17</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>n</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_P_Rep">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>240</y>
+          <width>71</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>60</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>P</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_P_calculate_Rep">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>290</y>
+          <width>141</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Расчитать</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_P_answer_Rep">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>280</y>
+          <width>211</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>ANSWER</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_P_underline">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>130</y>
+          <width>51</width>
+          <height>131</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>66</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>_</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="Multiplication">
+       <attribute name="title">
+        <string>Multiplication</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="Addition">
+       <attribute name="title">
+        <string>Addition</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
