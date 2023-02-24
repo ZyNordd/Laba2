@@ -55,3 +55,29 @@ void Combo::on_pushButton_P_calculate_clicked() {
     ui->lineEdit_P_answer->setText(QString::number(answer));
 }
 
+void Combo::on_pushButton_P_calculate_Rep_clicked() {
+    std::vector<int64_t> groups;
+    int64_t n = 0;
+    std::string tmp;
+    std::vector<std::string> split_str;
+    std::string groups_str = ui->lineEdit_P_n_Rep->text().toStdString();
+    for (auto i = 0; i < groups_str.size(); ++i) {
+        if (groups_str[i] != ' ' && groups_str[i] != ',') {
+            tmp.push_back(groups_str[i]);
+        }
+        else {
+            split_str.push_back(tmp);
+            tmp = "";
+        }
+    }
+    if(tmp != "") split_str.push_back(tmp);
+    for (auto i = 0; i < split_str.size(); ++i) {
+        groups.push_back(std::stoi(split_str[i]));
+        n += std::stoi(split_str[i]);
+    }
+    int64_t answer = factorial(n);
+    for (auto i = 0; i < groups.size(); ++i) {
+        answer /= factorial(groups[i]);
+    }
+    ui->lineEdit_P_answer_Rep->setText(QString::number(answer));
+}

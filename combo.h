@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <cmath>
+#include <vector>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Combo; }
@@ -26,5 +27,6 @@ private slots:
     void on_pushButton_C_calculate_clicked();
     void on_pushButton_C_calculate_Rep_clicked();
     void on_pushButton_P_calculate_clicked();
+    void on_pushButton_P_calculate_Rep_clicked();
 };
 #endif // COMBO_H
