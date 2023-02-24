@@ -21,43 +21,37 @@ int64_t Combo::factorial(int64_t n) {
     return f;
 }
 
-//This code is useful, but needs to be pasted into the right methods.
-    //int64_t k = 0;
-    //int64_t n = 0;
-    //int64_t answer = 0;
-    //switch (operation_type)
-    //{
-    //case 1:
-    //    if (!repetition) {
-    //        k = ui->lineEdit_electCount->text().toInt();//k
-    //        n = ui->lineEdit_allCount->text().toInt();//n
-    //        answer = factorial(n) / factorial(n - k);
-    //        ui->lineEdit_answer->setText(QString::number(answer));
-    //    }
-    //    else {
-    //        k = ui->lineEdit_electCount->text().toInt();//k
-    //        n = ui->lineEdit_allCount->text().toInt();//n
-    //        answer = pow(n,k);
-    //        ui->lineEdit_answer->setText(QString::number(answer));
-    //    }
-    //    break;
-    //case 2:
-    //    if (!repetition) {
-    //        k = ui->lineEdit_electCount->text().toInt();//k
-    //        n = ui->lineEdit_allCount->text().toInt();//n
-    //        answer = (factorial(n) / factorial(n - k)) / factorial(k);
-    //        ui->lineEdit_answer->setText(QString::number(answer));
-    //    }
-    //    else {
-    //        k = ui->lineEdit_electCount->text().toInt();//k
-    //        n = ui->lineEdit_allCount->text().toInt();//n
-    //        answer = (factorial(n + k - 1) / factorial(n - 1)) / factorial(k);
-    //        ui->lineEdit_answer->setText(QString::number(answer));
-    //    }
-    //    break;
-    //case 3:
-    //    n = ui->lineEdit_allCount->text().toInt();//n
-    //    answer = factorial(n);
-    //    ui->lineEdit_answer->setText(QString::number(answer));
-    //    break;
-    //}
+void Combo::on_pushButton_A_calculate_clicked() {
+    int64_t k = ui->lineEdit_A_k->text().toInt();//k
+    int64_t n = ui->lineEdit_A_n->text().toInt();//n
+    int64_t answer = factorial(n) / factorial(n - k);
+    ui->lineEdit_A_answer->setText(QString::number(answer));
+}
+
+void Combo::on_pushButton_A_calculate_Rep_clicked() {
+    int64_t k = ui->lineEdit_A_k_Rep->text().toInt();//k
+    int64_t n = ui->lineEdit_A_n_Rep->text().toInt();//n
+    int64_t answer = pow(n, k);
+    ui->lineEdit_A_answer_Rep->setText(QString::number(answer));
+}
+
+void Combo::on_pushButton_C_calculate_clicked() {
+    int64_t k = ui->lineEdit_C_k->text().toInt();//k
+    int64_t n = ui->lineEdit_C_n->text().toInt();//n
+    int64_t answer = (factorial(n) / factorial(n - k)) / factorial(k);
+    ui->lineEdit_C_answer->setText(QString::number(answer));
+}
+
+void Combo::on_pushButton_C_calculate_Rep_clicked() {
+    int64_t k = ui->lineEdit_C_k_Rep->text().toInt();//k
+    int64_t n = ui->lineEdit_C_n_Rep->text().toInt();//n
+    int64_t answer = (factorial(n + k - 1) / factorial(n - 1)) / factorial(k);
+    ui->lineEdit_C_answer_Rep->setText(QString::number(answer));
+}
+
+void Combo::on_pushButton_P_calculate_clicked() {
+    int64_t n = ui->lineEdit_P_n->text().toInt();//n
+    int64_t answer = factorial(n);
+    ui->lineEdit_P_answer->setText(QString::number(answer));
+}
+

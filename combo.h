@@ -21,6 +21,10 @@ private:
     int64_t factorial(int64_t n);
 
 private slots:
-
+    void on_pushButton_A_calculate_clicked();
+    void on_pushButton_A_calculate_Rep_clicked();
+    void on_pushButton_C_calculate_clicked();
+    void on_pushButton_C_calculate_Rep_clicked();
+    void on_pushButton_P_calculate_clicked();
 };
 #endif // COMBO_H
