@@ -81,3 +81,14 @@ void Combo::on_pushButton_P_calculate_Rep_clicked() {
     }
     ui->lineEdit_P_answer_Rep->setText(QString::number(answer));
 }
+
+void Combo::on_pushButton_equalMulti_clicked() {
+    int64_t first = std::stoi(ui->lineEdit_firstMulti->text().toStdString());
+    int64_t second = std::stoi(ui->lineEdit_secondMulti->text().toStdString());
+    ui->lineEdit_answerMulti->setText(QString::number(first * second));
+}
+void Combo::on_pushButton_equalUnion_clicked() {
+    int64_t first = std::stoi(ui->lineEdit_firstUnion->text().toStdString());
+    int64_t second = std::stoi(ui->lineEdit_secondUnion->text().toStdString());
+    ui->lineEdit_answerUnion->setText(QString::number(first + second));
+}

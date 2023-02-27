@@ -28,5 +28,7 @@ private slots:
     void on_pushButton_C_calculate_Rep_clicked();
     void on_pushButton_P_calculate_clicked();
     void on_pushButton_P_calculate_Rep_clicked();
+    void on_pushButton_equalMulti_clicked();
+    void on_pushButton_equalUnion_clicked();
 };
 #endif // COMBO_H
